@@ -5,11 +5,11 @@ import './styles/Projects.css'
 function Projects (){
   return (
     <Fragment>
-      <div class="main__background">
-      <img class="main__background_image" src="./asset/background2.jpg" alt="main__background"/>
+      <div className="main__background">
+      <img className="main__background_image" src="./asset/background2.jpg" alt="main__background"/>
     </div>
-    <div class="main__projects">
-      <div class="projects__carousel">
+    <div className="main__projects">
+      <div className="projects__carousel">
         <Project/>
       </div>
     </div>

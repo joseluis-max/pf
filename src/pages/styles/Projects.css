@@ -1,6 +1,6 @@
 .main__projects{
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
   position: absolute;

@@ -2,20 +2,24 @@ import {Fragment} from 'react'
 import Skill from '../Components/Skill'
 import './styles/AboutMe.css'
 
-function AboutMe (){
+function AboutMe ({skills}){
+  let skill = []
+  skills.forEach( s => {
+    skill.push(<Skill key={skills.indexOf(s)} data={s}/>)
+  })
   return(
     <Fragment>
-      <div class="main__wrapped">
-      <div class="main__background">
-        <img class="main__background_image" src="./asset/background3.jpg" alt="main__background"/>
+      <div className="main__wrapped">
+      <div className="main__background">
+        <img className="main__background_image" src="./asset/background3.jpg" alt="main__background"/>
       </div>
-      <div class="main__info">
-        <div class="main__infoHeader">
-          <h3 class="main__infoHeader_title">About Me</h3>
+      <div className="main__info">
+        <div className="main__infoHeader">
+          <h3 className="main__infoHeader_title">About Me</h3>
         </div>
-        <div class="main__infoWrapper">
-          <div class="main__info_fill"></div>
-          <p class="main__info_text">
+        <div className="main__infoWrapper">
+          <div className="main__info_fill"></div>
+          <p className="main__info_text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel elit volutpat, imperdiet orci eget,
             pretium
             dolor.
@@ -28,13 +32,13 @@ function AboutMe (){
         </div>
       </div>
     </div>
-    <div class="aboutMe">
-      <figure class="aboutMe__container">
-        <img class="aboutMe__container_image" src="./asset/perfil.jpg" alt=""/>
+    <div className="aboutMe">
+      <figure className="aboutMe__container">
+        <img className="aboutMe__container_image" src="./asset/perfil.jpg" alt=""/>
       </figure>
-      <div class="aboutMe__wrapper">
-        <h3 class="aboutMe__title">Passions</h3>
-        <p class="aboutMe__text">
+      <div className="aboutMe__wrapper">
+        <h3 className="aboutMe__title">Passions</h3>
+        <p className="aboutMe__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel elit volutpat, imperdiet orci eget,
           pretium
           dolor.
@@ -44,10 +48,10 @@ function AboutMe (){
           </p>
       </div>
     </div>
-    <div class="aboutMe__skills">
-      <h3 class="aboutMe__skills_title">Skills</h3>+
-      <div class="aboutMe__skills_container">
-       <Skill/>
+    <div className="aboutMe__skills">
+      <h3 className="aboutMe__skills_title">Skills</h3>
+      <div className="aboutMe__skills_container">
+       {skill}
       </div>  
     </div>
     </Fragment>
