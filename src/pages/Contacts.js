@@ -30,7 +30,7 @@ function Contacts(params) {
         </button>
       </div>
     </div>
-      </Fragment>
+    </Fragment>
     )
 }
 
