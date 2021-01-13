@@ -5,7 +5,7 @@ import './styles/AboutMe.css'
 function AboutMe ({skills}){
   let skill = []
   skills.forEach( s => {
-    skill.push(<Skill key={skills.indexOf(s)} data={s}/>)
+    skill.push(<Skill key={skills.indexOf(s)} skill={s}/>)
   })
   return(
     <Fragment>

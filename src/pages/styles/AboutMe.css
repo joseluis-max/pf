@@ -87,6 +87,7 @@
 }
 .skills__skill_nivel{
  display: flex;
+ margin-left: 10px;
 }
 .skill__nivel_bar{
   width: 50px;
@@ -97,24 +98,27 @@
   height: 100%;
   background-color:white;
   border: 1px solid gray;
-
+  transition: all 500ms ease;
   box-sizing: border-box;
-  margin: 0px 10px;
+  margin: 0px 0px;
+}
+.hidden__level{
+  border: 1px solid gray !important;
 }
 .begginer{
-    border-bottom: 34px solid red;
+  border-bottom: 34px solid red;
 }
 .elementary{
-    border-bottom: 68px solid red;
+  border-bottom: 68px solid red;
 }
 .intermediate{
-    border-bottom: 102px solid red;
+  border-bottom: 102px solid red;
 }
 .advanced{
-    border-bottom: 136px solid red;
+  border-bottom: 136px solid red;
 }
 .expert{
-    border-bottom: 170px solid red;
+  border-bottom: 170px solid red;
 }
 .god{
     border-bottom: 204px solid red;
@@ -130,8 +134,8 @@
   box-sizing: border-box;
 }
 .bar__lines{
-  border-top: 1px solid gray;
-  margin-left: 10px;
+  border-top: 2px solid gray;
+  background: transparent;
 }
 .skills__skill_tag{
   display: grid;
