@@ -5,81 +5,58 @@
   left: 13%;
   bottom: 0;
 }
-.main__chat{
-  width: 300px;
+.main__email{
+  width: 50%;
+  height: 500px;
   background-color:  rgba(250, 250, 250, 0.8);
-  padding: 20px 20px;
+  padding: 10px 10px;
   box-sizing: border-box;
-  border-radius: 0px 10px 10px 10px;
-  margin: 20px;
-  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 15px 10px 2px rgba(0, 0, 0, 0.3);
 }
-.main__chat_wrapper{
-  overflow: scroll;
-  height: 90vh;
-}
-.main__chat_wrapper::-webkit-scrollbar{
-  display: none;
-}
-.main__chatleft{
-  width: 300px;
-  background-color:  rgba(250, 250, 250, 0.8);
-  padding: 20px 20px;
-  box-sizing: border-box;
-  border-radius: 10px 0px 10px 10px;
-  margin: 20px;
-  position: relative;
-  margin-left: auto;
-}
-.main__chat::after{
-  bottom: 72%;
-  left: -7.4%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-right-color:  rgba(250, 250, 250, 0.8) ;
-  border-width: 11px;
-}
-.main__chatleft::after{
-  bottom: 72%;
-  right: -7.4%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-left-color:  rgba(250, 250, 250, 0.8) ;
-  border-width: 11px;
-}
-.main__chat_text{
-  text-align: center;
-  font-size: 0.5rem;
-}
-.main__chatBar{
-  height: 56px;
-  background-color:rgba(250, 250, 250, 0.5);
-  box-sizing: border-box;
-}
-.main__chatBar_input{
-  width: 90%;
+.main__email_wrapper{
+  height: 100vh;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   box-sizing: border-box;
-  margin: 0px 0px 0px 10px;
-  border: none;
+   animation: appear 400ms forwards linear;
 }
-.main__chatBar_send{
-  width: 32px;
-  height: 32px;
-  margin: 10px;
-  padding: 0px;
-  background-color: transparent;
-  border: none;
-  vertical-align: middle;
+
+.main__email_input{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  
 }
-.main__chatBar_send:focus{
-  outline: none;
+.main__email_text{
+  font-size: 0.8rem;
+  display: block;
+}
+
+.main__email_send{
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: rgb(0, 211, 0);
+  border: 1px solid rgb(0, 117, 0);
+  border-radius: 5px;
+}
+
+.main__email_textarea{
+  width: 100% !important;
+  height: 30% !important;
+}
+
+
+@keyframes appear {
+  from{
+    transform: translateY(20px);
+    opacity:0;
+  }
+  to{
+    opacity:1;
+    transform: translateY(-20px);
+  }
 }
